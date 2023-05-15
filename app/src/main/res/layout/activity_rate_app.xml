@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFA600"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activity.RateApp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="114dp"
+                android:background="@color/purple_500" />
+            <RelativeLayout
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="-75dp"
+                android:background="@drawable/image"
+                android:padding="20dp"
+                tools:ignore="ExtraText">
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/round" />
+
+
+                <ImageView
+                    android:id="@+id/emoji"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:adjustViewBounds="true"
+                    android:padding="25dp"
+                    android:src="@drawable/z3" />
+
+
+
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_gravity="center">
+            <TextView
+                android:layout_width="215dp"
+                android:layout_height="48dp"
+                android:background="@drawable/later"
+                android:text="Please Give Your Feedback"
+                android:textColor="@color/red"
+                android:layout_marginTop="10dp"
+                android:textSize="17dp"
+                tools:ignore="HardcodedText">
+            </TextView>
+
+                <com.example.feemanagementsystem.activity.smile
+                    android:id="@+id/emotionalfaceview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="58dp"
+                    tools:ignore="MissingClass" />
+
+            </LinearLayout>
+            <EditText
+                android:id="@+id/feedback_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your feedback here"
+                android:textStyle="italic"
+                android:inputType="textMultiLine"
+                android:maxLength="200"
+                android:maxLines="5"
+                tools:ignore="HardcodedText"/>
+
+            <androidx.appcompat.widget.AppCompatRatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:stepSize="0.2"
+                android:layout_marginVertical="20dp"
+                android:rating="3">
+
+            </androidx.appcompat.widget.AppCompatRatingBar>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="20dp"
+                android:gravity="center"
+                android:layout_marginBottom="20dp"
+                android:paddingVertical="10dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/laterbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Later"
+                    android:textAllCaps="false"
+                    android:textColor="#CC000000"
+                    android:paddingHorizontal="20dp"
+                    android:background="@drawable/later"
+                    tools:ignore="HardcodedText" />
+
+
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/ratenow"
+                    android:layout_marginStart="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Rate Now"
+                    android:minLines="1"
+                    android:textAllCaps="false"
+                    android:textColor="#cc000000"
+                    android:paddingHorizontal="20dp"
+                    android:background="@drawable/ratenow"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

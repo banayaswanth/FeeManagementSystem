@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbarRenewDialog"
+        android:background="@color/purple_700"
+        app:titleTextColor="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_700">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="35dp"
+            android:background="@color/purple_700"
+            android:src="@drawable/back_arrow"
+            android:id="@+id/imgDialogRenewBack"
+            tools:ignore="Content Description" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:text="Repayment of Fee"
+            android:textSize="17sp"
+            android:background="@color/purple_700"
+            android:gravity="center"
+            android:layout_toEndOf="@id/imgDialogRenewBack"
+            android:layout_marginStart="15dp"
+            android:textColor="@color/white"
+            tools:ignore="HardcodedText" />
+
+    </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:hint="Date of Payment"
+                android:id="@+id/edtDialogJoining"
+                android:layout_weight="1"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:enabled="false"
+                tools:ignore="Autofill, HardcodedText, TextFields" />
+            <ImageView
+                android:id="@+id/imgDialogPicDate"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/ic_calendar"
+                tools:ignore="ContentDescription"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Number Of Month"
+                android:textSize="16sp"
+                android:layout_weight="0.7"
+                android:textColor="@color/black"/>
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:id="@+id/spDialogMonthly"
+                android:entries="@array/membership"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:backgroundTint="@color/drop_down_icon"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:weightSum="1">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RePayment on : "
+                android:layout_weight="0.7"
+                tools:ignore="HardcodedText"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                />
+
+            <EditText
+                android:id="@+id/edtDialogRepayment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:inputType="date"
+                android:enabled="false"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:hint="Re-Payment Date"
+                tools:ignore="Autofill,LabelFor"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:weightSum="1">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Discount(%) : "
+                android:layout_weight="0.7"
+                tools:ignore="HardcodedText"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_weight="0.3"
+                android:inputType="numberDecimal"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:id="@+id/edtDialogDiscount"
+                tools:ignore="Autofill,HardcodedText,LabelFor"
+                android:gravity="end"
+                android:text="0.00"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:weightSum="1">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Total : "
+                android:layout_weight="0.7"
+                tools:ignore="HardcodedText"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:inputType="numberDecimal"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:id="@+id/edtDialogAmount"
+                tools:ignore="Autofill,HardcodedText,LabelFor"
+                android:gravity="end"
+                android:hint="0.00"/>
+        </LinearLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="@string/save"
+            android:id="@+id/btnDialogRenewSave"
+            android:background="@color/purple_500"
+            android:layout_gravity="center"
+            android:layout_margin="15dp"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            tools:ignore="ButtonStyle"/>
+    </LinearLayout>
+
+</LinearLayout>

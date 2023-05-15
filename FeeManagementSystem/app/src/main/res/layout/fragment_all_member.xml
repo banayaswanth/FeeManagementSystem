@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:focusable="false"
+    android:focusableInTouchMode="true"
+    tools:context=".fragment.FragmentAllMember">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/layoutStatus"
+        android:gravity="center">
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rdGroupMember"
+            android:layout_marginStart="10dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rdActiveMember"
+                android:checked="true"
+                android:text="List of Paid Fees"
+                android:textSize="15sp"
+                style="bold"
+                tools:ignore="HardcodedText" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rdInActiveMember"
+                android:layout_marginStart="10dp"
+                android:text="List of Unpaid Fees"
+                android:textSize="15sp"
+                style="bold"
+                tools:ignore="HardcodedText" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/view"
+        android:background="@color/black"
+        android:layout_below="@+id/layoutStatus"
+        android:layout_marginTop="4dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtAllMemberSearch"
+        android:layout_margin="5dp"
+        android:textSize="16sp"
+        android:layout_below="@+id/view"
+        android:textColor="@color/black"
+        android:hint="@string/search"
+        tools:ignore="Autofill, TextFields" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerViewMember"
+        android:layout_below="@id/edtAllMemberSearch"
+        android:layout_margin="5dp"
+        android:clipToPadding="false"
+        android:paddingBottom="60dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/txtAllMemberNDF"
+        android:textSize="16sp"
+        android:text="No Data Found"
+        android:layout_below="@id/edtAllMemberSearch"
+        android:gravity="center"
+        android:textColor="@color/red"
+        tools:ignore="HardcodedText" />
+    <ImageView
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src="@drawable/ic_add_member"
+        android:id="@+id/imgAddMember"
+        android:layout_margin="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        tools:ignore="ContentDescription" />
+
+</RelativeLayout>

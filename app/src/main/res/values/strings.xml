@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">FeeManagementSystem</string>
+    <string name="log_in">Log In</string>
+    <string name="home">Home</string>
+    <string name="add_member">Add Student</string>
+    <string name="fee_pending">Fee Pending</string>
+    <string name="setting">Setting</string>
+    <string name="add_update_fee">Update Fee</string>
+    <string name="change_password_mobile">Change Password/Mobile</string>
+    <string name="log_out">Log Out</string>
+    <string name="navigation_drawer_open">Open</string>
+    <string name="navigation_drawer_close">Close</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="save">save</string>
+    <string name="monthly_fee_payment">Monthly Fee Payment</string>
+    <string name="_1_month_fee">1 Month Fee :</string>
+    <string name="_0_00">0.00</string>
+    <string name="_3_month_fee">3 Month Fee :</string>
+    <string name="_6_month_fee">6 Month Fee :</string>
+    <string name="_9_month_fee">9 Month Fee :</string>
+    <string name="_12_month_fee">12 Month Fee :</string>
+    <string name="saves">Save</string>
+    <string-array name="membership">
+        <item>Select</item>
+        <item>1 Month</item>
+        <item>3 Months</item>
+        <item>6 Months</item>
+        <item>9 Months</item>
+        <item>12 Months</item>
+    </string-array>
+    <string name="rating_bar_label">Rating Bar</string>
+    <string name="submit">Submit</string>
+    <string name="active">Active</string>
+    <string name="search">search</string>
+    <string name="no_data_found">no_data_found</string>
+    <string name="pendingPayment">Pending Payment</string>
+    <string name="save1">save</string>
+    <string name="Active">Active</string>
+    <string name="rate_the_app">rate_the_app</string>
+    <string name="rate_our_app">Rate Our App</string>
+    <string name="rate_the_appp">Rate The App</string>
+
+</resources>

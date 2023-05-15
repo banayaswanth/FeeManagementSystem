@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.FragmentFeePending">
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtPendingSearch"
+        android:layout_margin="5dp"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:hint="@string/search"
+        tools:ignore="Autofill, TextFields" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/edtPendingSearch"
+        android:id="@+id/recyclerViewPending"
+        android:visibility="visible"
+        android:layout_margin="5dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/txtPendingNDF"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_below="@id/recyclerViewPending"
+        android:textColor="@color/red"
+        android:textSize="16sp"
+        android:text="@string/no_data_found"
+        tools:ignore="HardcodedText" />
+
+</RelativeLayout>
